@@ -1,6 +1,8 @@
 <%# <h1>Bookings#show</h1>
 <p>Find me in app/views/bookings/show.html.erb</p> %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_230/vue-a%C3%A9rienne-paris-tour-eiffel-coucher-de-soleil-%7C-630x405-%7C-%C2%A9-fotolia/19544352-1-fre-FR/Vue-a%C3%A9rienne-Paris-Tour-Eiffel-coucher-de-soleil-%7C-630x405-%7C-%C2%A9-Fotolia.jpg);">
 <h1 class="text-center mt-3">RÉSERVATION</h1>
+</div>
 <div class="container">
   <div class="card-product">
     <%= booking.offer.photo %>
@@ -10,8 +12,13 @@
       <h2> Prix: <%= @booking.offer.price %></h2>
       <h2> Début: <%= @booking.start_time %></h2>
       <h2> Fin: <%= @booking.end_time %></h2>
-      <%# <li class="list-group-item">DATE DE RÉSERVATION: <%= @offer.booking.date.strftime("%d/%m/%Y") %></li> 
+      <%# <li class="list-group-item">DATE DE RÉSERVATION: <%= @offer.booking.date.strftime("%d/%m/%Y") %></li>
       <h2> Commentaire: <%= @booking.content %></h2>
     </div>
+    <%= link_to 'Voir mes réservations', bookings_path, class: 'btn btn-flat' %>
+    <%= link_to "Supprimer la réservation",
+  booking_path(@booking),
+  data: {turbo_method: :delete, turbo_confirm: "Etes- vous sûr?"}
+%>
   </div>
 </div>

@@ -1,15 +1,18 @@
 <%# <h1>Bookings#new</h1>
 <p>Find me in app/views/bookings/new.html.erb</p> %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lonelyplanet.fr/sites/lonelyplanet/files/styles/manual_crop/public/media/destination/slider/mobile/paris2_0.jpg?itok=7T2J_RQk);">
 <h1 class="text-center"> RÉSERVEZ</h1>
+</div>
 <div class="container">
-<div class="banner">
+<div class="row">
 <%= simple_form_for ([@offer, @booking]) do |f| %>
   <%= f.input :start_time %>
   <%= f.input :end_time %>
   <%= f.input :content %>
     <div class="text-center">
-      <%= f.submit "Réserver", class: "btn btn-flat" %>
+      <%= f.submit "Réserver", class: "btn btn-flat mb-4" %>
     </div>
 <% end %>
+</div>
 </div>
 </div>

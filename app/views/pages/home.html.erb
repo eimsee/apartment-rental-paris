@@ -6,8 +6,14 @@
   </div>
 </div>
 <div class="container d-flex justify-content-center text-center mt-5">
+  <div class="container">
+    <h3>GÉOLOCALISATION LOCATIONS: </h3>
   <div>
-    <h3>LES APPARTEMENTS LES MIEUX NOTÉS: </h3>
+  </div>
+    <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="pk.eyJ1IjoiZWltc2VlIiwiYSI6ImNsYWxoYjN1ZTA1amkzcW50dG9lOXZvencifQ.HwOYmj6MTzhZQVUsLFqubQ"></div>
   </div>
   </div>
   <div class="d-flex flex-justify-content-center text-center">
