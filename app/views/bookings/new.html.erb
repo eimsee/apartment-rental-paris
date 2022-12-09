@@ -1,0 +1,15 @@
+<%# <h1>Bookings#new</h1>
+<p>Find me in app/views/bookings/new.html.erb</p> %>
+<h1 class="text-center"> RÉSERVEZ</h1>
+<div class="container">
+<div class="banner">
+<%= simple_form_for ([@offer, @booking]) do |f| %>
+  <%= f.input :start_time %>
+  <%= f.input :end_time %>
+  <%= f.input :content %>
+    <div class="text-center">
+      <%= f.submit "Réserver", class: "btn btn-flat" %>
+    </div>
+<% end %>
+</div>
+</div>

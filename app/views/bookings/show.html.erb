@@ -1,0 +1,17 @@
+<%# <h1>Bookings#show</h1>
+<p>Find me in app/views/bookings/show.html.erb</p> %>
+<h1 class="text-center mt-3">RÉSERVATION</h1>
+<div class="container">
+  <div class="card-product">
+    <%= booking.offer.photo %>
+    <div class="card-product-infos">
+      <h2> Location: <%= @booking.offer.name %></h2>
+      <h2> Adresse: <%= @booking.offer.address %></h2>
+      <h2> Prix: <%= @booking.offer.price %></h2>
+      <h2> Début: <%= @booking.start_time %></h2>
+      <h2> Fin: <%= @booking.end_time %></h2>
+      <%# <li class="list-group-item">DATE DE RÉSERVATION: <%= @offer.booking.date.strftime("%d/%m/%Y") %></li> 
+      <h2> Commentaire: <%= @booking.content %></h2>
+    </div>
+  </div>
+</div>
